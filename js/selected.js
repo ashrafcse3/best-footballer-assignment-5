@@ -18,6 +18,13 @@ function playerSelect(element) {
     const playerName = element.parentNode.parentNode.children[0].innerText;
     selectedPlayer.push(playerName);
 
+    // disable the clicked button
+    const clickedButton = element;
+    element.setAttribute('disabled', '');
+    // change the button background color and text color
+    element.style.backgroundColor = 'grey';
+    element.style.color = 'white';
+
     // add the player name into the selected section
     // console.log();
     displaySelectedPlayer(selectedPlayer);
